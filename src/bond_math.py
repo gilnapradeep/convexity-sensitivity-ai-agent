@@ -52,14 +52,14 @@ def dv01(face, coupon_rate, ytm, years, freq=2):
     price = bond_price(face, coupon_rate, ytm, years, freq)
     return md * price / 10000
 
-
-Price = bond_price(face=100, coupon_rate=0.0726, ytm=0.0735, years=9)
-print("Price:", round(Price,2))
-Macaulay_Duration = macaulay_duration(100, 0.0726, 0.0735, 9)
-print("Macaulay Duration:", round(Macaulay_Duration,2))
-Modified_Duration = modified_duration(100, 0.0726, 0.0735, 9)
-print("Modified Duration:", round(Modified_Duration,2))
-Convexity = convexity(100, 0.0726, 0.0735, 9)
-print("Convexity:", round(Convexity,2))
-DV01 = dv01(100, 0.0726, 0.0735, 9)
-print("DV01:", round(DV01,4))
+if __name__ == "__main__":
+    Price = bond_price(face=100, coupon_rate=0.0726, ytm=0.0735, years=9)
+    print("Price:", round(Price,2))
+    Macaulay_Duration = macaulay_duration(100, 0.0726, 0.0735, 9)
+    print("Macaulay Duration:", round(Macaulay_Duration,2))
+    Modified_Duration = modified_duration(100, 0.0726, 0.0735, 9)
+    print("Modified Duration:", round(Modified_Duration,2))
+    Convexity = convexity(100, 0.0726, 0.0735, 9)
+    print("Convexity:", round(Convexity,2))
+    DV01 = dv01(100, 0.0726, 0.0735, 9)
+    print("DV01:", round(DV01,4))
